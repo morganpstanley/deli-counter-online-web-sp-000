@@ -3,14 +3,12 @@
 require 'pry'
 
 def line(current_line)
-  if current_line == []
+  if current_line.empty?
     current_line_result = "The line is currently empty."
   else
-    i = 1
     current_line_result = "The line is currently:"
-    current_line.each do |person|
+    current_line.each do |person, i|
       current_line_result << " #{i}. #{person}"
-      i += 1
     end
   end
   puts current_line_result
